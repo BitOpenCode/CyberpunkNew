@@ -790,6 +790,10 @@ body {
         font-size: 1.25rem;
         margin-bottom: 0.25rem;
     }
+
+    .asic-miner {
+        top: 50%;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -942,9 +946,9 @@ body {
             const energyDisplay = document.querySelector('.circular-button:first-child span');
 
             let miningInterval;
-            const miningDuration = 1 * 60; // 1 minute in seconds
+            const miningDuration = 1 * 60; 
             const profitAmount = 0.0001287;
-            const energyCostPerSession = 3.51; // Energy cost for one mining session
+            const energyCostPerSession = 3.51; 
             let timeRemaining = miningDuration;
 
             function formatTime(seconds) {
@@ -1003,9 +1007,9 @@ body {
 
                                 if (timeRemaining <= 0) {
                                     clearInterval(miningInterval);
-                                    startMiningButton.disabled = false; // Enable button
-                                    startMiningButton.textContent = 'Claim'; // Change text to Claim
-                                    timerDisplay.style.visibility = 'hidden'; // Hide timer
+                                    startMiningButton.disabled = false; 
+                                    startMiningButton.textContent = 'Claim'; 
+                                    timerDisplay.style.visibility = 'hidden'; 
                                 }
                             }, 1000);
                         } else {
